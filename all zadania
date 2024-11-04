@@ -1,0 +1,1695 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Запрашиваем у пользователя ввод двух чисел
+        Console.Write("Введите первое число: ");
+        string input1 = Console.ReadLine();
+        
+        Console.Write("Введите второе число: ");
+        string input2 = Console.ReadLine();
+
+        // Пробуем конвертировать введенные значения в числа
+        try
+        {
+            double number1 = Convert.ToDouble(input1);
+            double number2 = Convert.ToDouble(input2);
+
+            // Сравниваем числа и выводим результат
+            if (number1 == number2)
+            {
+                Console.WriteLine("Два числа равны.");
+            }
+            else if (number1 > number2)
+            {
+                Console.WriteLine("Первое число больше второго.");
+            }
+            else
+            {
+                Console.WriteLine("Первое число меньше второго.");
+            }
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Пожалуйста, введите корректные числа.");
+        }
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Запрашиваем у пользователя ввод двух чисел
+        Console.Write("Введите первое число: ");
+        string input1 = Console.ReadLine();
+        
+        Console.Write("Введите второе число: ");
+        string input2 = Console.ReadLine();
+
+        // Пробуем конвертировать введенные значения в числа
+        try
+        {
+            double number1 = Convert.ToDouble(input1);
+            double number2 = Convert.ToDouble(input2);
+
+            // Сравниваем числа и выводим результат
+            if (number1 == number2)
+            {
+                Console.WriteLine("Два числа равны.");
+            }
+            else if (number1 > number2)
+            {
+                Console.WriteLine("Первое число больше второго.");
+            }
+            else
+            {
+                Console.WriteLine("Первое число меньше второго.");
+            }
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Пожалуйста, введите корректные числа.");
+        }
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Запрашиваем у пользователя ввод двух чисел
+        Console.Write("Введите первое число: ");
+        string input1 = Console.ReadLine();
+        
+        Console.Write("Введите второе число: ");
+        string input2 = Console.ReadLine();
+
+        // Пробуем конвертировать введенные значения в числа
+        try
+        {
+            double number1 = Convert.ToDouble(input1);
+            double number2 = Convert.ToDouble(input2);
+
+            // Сравниваем числа и выводим результат
+            if (number1 == number2)
+            {
+                Console.WriteLine("Два числа равны.");
+            }
+            else if (number1 > number2)
+            {
+                Console.WriteLine("Первое число больше второго.");
+            }
+            else
+            {
+                Console.WriteLine("Первое число меньше второго.");
+            }
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Пожалуйста, введите корректные числа.");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Запрашиваем у пользователя ввод числа
+        Console.Write("Введите число: ");
+        
+        // Читаем введенную строку
+        string input = Console.ReadLine();
+        
+        // Переменная для хранения числа
+        double number;
+
+        // Пробуем преобразовать строку в число
+        bool isValid = Double.TryParse(input, out number);
+
+        // Проверяем, корректно ли преобразовалось число
+        if (isValid)
+        {
+            // Проверяем, равно ли число 5 или 10
+            if (number == 5 || number == 10)
+            {
+                // Если условие выполнено, выводим сообщение
+                Console.WriteLine("Число либо равно 5, либо равно 10");
+            }
+            else
+            {
+                // Если условие не выполнено, выводим другое сообщение
+                Console.WriteLine("Неизвестное число");
+            }
+        }
+        else
+        {
+            // Если введено некорректное значение, выводим сообщение об ошибке
+            Console.WriteLine("Ошибка: Пожалуйста, введите корректное число.");
+        }
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Запрашиваем у пользователя ввод суммы вклада
+        Console.Write("Введите сумму вклада: ");
+        
+        // Преобразуем введенное значение в число
+        double depositAmount = Convert.ToDouble(Console.ReadLine());
+        double interestRate;
+        
+        // Определяем процент в зависимости от суммы вклада
+        if (depositAmount < 100)
+        {
+            interestRate = 0.05; // 5%
+        }
+        else if (depositAmount >= 100 && depositAmount <= 200)
+        {
+            interestRate = 0.07; // 7%
+        }
+        else
+        {
+            interestRate = 0.10; // 10%
+        }
+
+        // Рассчитываем сумму вклада с начисленными процентами
+        double totalAmount = depositAmount + (depositAmount * interestRate);
+        
+        // Выводим результат
+        Console.WriteLine($"Сумма вклада с начисленными процентами: {totalAmount}");
+    }
+}
+
+
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Выводим сообщение с доступными операциями
+        Console.WriteLine("Введите номер операции:");
+        Console.WriteLine("1. Сложение");
+        Console.WriteLine("2. Вычитание");
+        Console.WriteLine("3. Умножение");
+
+        // Запрашиваем ввод номера операции
+        Console.Write("Ваш номер операции: ");
+        int operationNumber;
+
+        // Пробуем преобразовать ввод пользователя в число
+        if (int.TryParse(Console.ReadLine(), out operationNumber))
+        {
+            // Определяем операцию по введенному номеру с помощью switch...case
+            switch (operationNumber)
+            {
+                case 1:
+                    Console.WriteLine("Вы выбрали операцию: Сложение");
+                    break;
+                case 2:
+                    Console.WriteLine("Вы выбрали операцию: Вычитание");
+                    break;
+                case 3:
+                    Console.WriteLine("Вы выбрали операцию: Умножение");
+                    break;
+                default:
+                    Console.WriteLine("Операция неопределена.");
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Выводим сообщение с доступными операциями
+        Console.WriteLine("Введите номер операции:");
+        Console.WriteLine("1. Сложение");
+        Console.WriteLine("2. Вычитание");
+        Console.WriteLine("3. Умножение");
+
+        // Запрашиваем ввод номера операции
+        Console.Write("Ваш номер операции: ");
+        int operationNumber;
+
+        // Пробуем преобразовать ввод пользователя в число
+        if (int.TryParse(Console.ReadLine(), out operationNumber))
+        {
+            // Запрашиваем два числа
+            Console.Write("Введите первое число: ");
+            double firstNumber = double.Parse(Console.ReadLine());
+            Console.Write("Введите второе число: ");
+            double secondNumber = double.Parse(Console.ReadLine());
+
+            double result = 0;
+
+            // Определяем операцию по введенному номеру с помощью switch...case
+            switch (operationNumber)
+            {
+                case 1:
+                    result = firstNumber + secondNumber;
+                    Console.WriteLine($"Результат сложения: {result}");
+                    break;
+                case 2:
+                    result = firstNumber - secondNumber;
+                    Console.WriteLine($"Результат вычитания: {result}");
+                    break;
+                case 3:
+                    result = firstNumber * secondNumber;
+                    Console.WriteLine($"Результат умножения: {result}");
+                    break;
+                default:
+                    Console.WriteLine("Операция неопределена.");
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Запрашиваем у пользователя ввод строки
+        Console.Write("Введите строку: ");
+        string input = Console.ReadLine();
+
+        // Проверяем, соответствует ли введенная строка "Python кака"
+        if (input == "Python кака")
+        {
+            Console.WriteLine("Да");
+        }
+        else
+        {
+            Console.WriteLine("Нет");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int countEven = 0; // Счетчик четных чисел
+
+        // Считываем три числа
+        Console.WriteLine("Введите первое число:");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Введите второе число:");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Введите третье число:");
+        int num3 = Convert.ToInt32(Console.ReadLine());
+
+        // Проверяем каждое число на четность
+        if (num1 % 2 == 0)
+        {
+            countEven++;
+        }
+
+        if (num2 % 2 == 0)
+        {
+            countEven++;
+        }
+
+        if (num3 % 2 == 0)
+        {
+            countEven++;
+        }
+
+        // Выводим результат
+        Console.WriteLine("Количество четных чисел: " + countEven);
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Запрашиваем у пользователя ввод числа
+        Console.WriteLine("Введите число:");
+        int number = Convert.ToInt32(Console.ReadLine());
+
+        // Проверяем, является ли число положительным или отрицательным
+        if (number > 0)
+        {
+            Console.WriteLine("Введенное число положительное.");
+        }
+        else if (number < 0)
+        {
+            Console.WriteLine("Введенное число отрицательное.");
+        }
+        else
+        {
+            Console.WriteLine("Введенное число является нулем.");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Запрашиваем у пользователя ввод двухзначного числа
+        Console.WriteLine("Введите двухзначное число:");
+        
+        try
+        {
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            // Проверяем, что число действительно двухзначное
+            if (number < 10 || number > 99)
+            {
+                Console.WriteLine("Ошибка: введенное число не является двухзначным.");
+            }
+            else
+            {
+                // Находим разряд десятков и разряд единиц
+                int tens = number / 10; // Десятки
+                int units = number % 10; // Единицы
+
+                // Выводим результаты
+                Console.WriteLine($"Десятки: {tens}");
+                Console.WriteLine($"Единицы: {units}");
+            }
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Ошибка: введено не число.");
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Ошибка: число вне диапазона допустимых значений.");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Запрашиваем у пользователя ввод двухзначного числа
+        Console.WriteLine("Введите двухзначное число:");
+        
+        try
+        {
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            // Проверяем, что число действительно двухзначное
+            if (number < 10 || number > 99)
+            {
+                Console.WriteLine("Ошибка: введенное число не является двухзначным.");
+            }
+            else
+            {
+                // Находим разряд десятков и разряд единиц
+                int tens = number / 10; // Десятки
+                int units = number % 10; // Единицы
+
+                // Выводим результаты
+                Console.WriteLine($"Десятки: {tens}");
+                Console.WriteLine($"Единицы: {units}");
+            }
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Ошибка: введено не число.");
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Ошибка: число вне диапазона допустимых значений.");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Цикл for для вывода чисел от 10 до 30
+        for (int i = 10; i <= 30; i++)
+        {
+            Console.WriteLine(i); // Выводим текущее число
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int a = 30; // Пример значения для a
+        int b = 10; // Пример значения для b
+
+        // Убедимся, что a больше b
+        if (a > b)
+        {
+            // Цикл for для вывода квадратных корней от b до a
+            for (int i = b; i <= a; i++)
+            {
+                double squareRoot = Math.Sqrt(i); // Вычисляем квадратный корень
+                Console.WriteLine(squareRoot); // Выводим квадратный корень на экран
+            }
+        }
+        else
+        {
+            Console.WriteLine("Ошибка: a должно быть больше b.");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Цикл for для чисел от 100 до 200
+        for (int i = 100; i <= 200; i++)
+        {
+            // Проверяем, кратно ли число 3
+            if (i % 3 == 0)
+            {
+                Console.WriteLine(i); // Выводим число на экран
+            }
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int a, b, c;
+
+        // Ввод значений a, b и c
+        Console.Write("Введите значение a: ");
+        a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите значение b: ");
+        b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите значение c: ");
+        c = int.Parse(Console.ReadLine());
+
+        // Цикл для чисел от a до b
+        for (int i = a; i <= b; i++)
+        {
+            // Проверяем, кратно ли число c
+            if (i % c == 0)
+            {
+                Console.WriteLine(i); // Выводим число на экран
+            }
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int a, b, c;
+
+        // Ввод значений a, b и c
+        Console.Write("Введите значение a: ");
+        a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите значение b: ");
+        b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите значение c: ");
+        c = int.Parse(Console.ReadLine());
+
+        // Цикл для чисел от a до b
+        for (int i = a; i <= b; i++)
+        {
+            // Проверяем, кратно ли число c
+            if (i % c == 0)
+            {
+                Console.WriteLine(i); // Выводим число на экран
+            }
+        }
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int sum = 0;
+
+        // Цикл для всех чисел от 1 до 49
+        for (int i = 1; i < 50; i++)
+        {
+            // Проверяем, является ли число нечетным
+            if (i % 2 != 0)
+            {
+                sum += i; // Добавляем нечетное число к сумме
+            }
+        }
+
+        // Выводим сумму
+        Console.WriteLine("Сумма положительных нечетных чисел, меньших 50: " + sum);
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int a = 5; // Задайте значение a
+        int b = 20; // Задайте значение b
+        int result = SumOfMultiplesOfFour(a, b);
+        
+        Console.WriteLine($"Сумма чисел, кратных 4, в диапазоне от {a} до {b}: {result}");
+    }
+
+    static int SumOfMultiplesOfFour(int a, int b)
+    {
+        // Убедитесь, что a - положительное число
+        if (a <= 0 || b <= 0)
+            return 0;
+
+        // Начинаем с ближайшего кратного 4 к a
+        if (a % 4 != 0)
+        {
+            a += (4 - a % 4);
+        }
+
+        // Если a стал больше b, возвращаем 0
+        if (a > b)
+        {
+            return 0;
+        }
+
+        // Считаем сумму
+        int totalSum = 0;
+        for (int number = a; number <= b; number += 4)
+        {
+            totalSum += number;
+        }
+
+        return totalSum;
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Вызываем метод для вывода сообщения
+        PrintMessage("Привет, мир!");
+    }
+
+    static void PrintMessage(string message)
+    {
+        Console.WriteLine(message);
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double a = 10.0;
+        double b = 5.0;
+
+        Console.WriteLine("Сложение: " + Add(a, b));
+        Console.WriteLine("Вычитание: " + Subtract(a, b));
+        Console.WriteLine("Умножение: " + Multiply(a, b));
+        Console.WriteLine("Деление: " + Divide(a, b));
+    }
+
+    static double Add(double x, double y)
+    {
+        return x + y;
+    }
+
+    static double Subtract(double x, double y)
+    {
+        return x - y;
+    }
+
+    static double Multiply(double x, double y)
+    {
+        return x * y;
+    }
+
+    static double Divide(double x, double y)
+    {
+        if (y == 0)
+        {
+            throw new DivideByZeroException("Деление на ноль недопустимо.");
+        }
+        return x / y;
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 1, 2, 3, 4, -1, 6, 7 };
+
+        // Блок 1: Выводит все элементы массива
+        Console.WriteLine("Все элементы массива:");
+        foreach (int elem in arr)
+        {
+            Console.WriteLine(elem);
+        }
+
+        // Блок 2: Выводит все элементы массива в обратном порядке
+        Console.WriteLine("\nЭлементы массива в обратном порядке:");
+        Array.Reverse(arr);
+        foreach (int elem in arr)
+        {
+            Console.WriteLine(elem);
+        }
+        Array.Reverse(arr); // Возвращаем массив в исходное состояние
+
+        // Блок 3: Выводит чётные элементы массива
+        Console.WriteLine("\nЧётные элементы массива:");
+        foreach (int elem in arr)
+        {
+            if (elem % 2 == 0)
+            {
+                Console.WriteLine(elem);
+            }
+        }
+
+        // Блок 4: Выводит все элементы массива через 1
+        Console.WriteLine("\nЭлементы массива через 1:");
+        for (int i = 0; i < arr.Length; i += 2)
+        {
+            Console.WriteLine(arr[i]);
+        }
+
+        // Блок 5: Выводит элементы пока не встретится -1
+        Console.WriteLine("\nЭлементы массива до -1:");
+        foreach (int elem in arr)
+        {
+            if (elem == -1)
+                break;
+            Console.WriteLine(elem);
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Изначальный массив
+        int[] initialArray = { 1, 2, 3, 4, 5 };
+        
+        // Блок 1: Добавление элемента в конец
+        Array.Resize(ref initialArray, initialArray.Length + 1);
+        initialArray[initialArray.Length - 1] = 6;
+
+        // Блок 2: Добавление элемента в начало
+        Array.Resize(ref initialArray, initialArray.Length + 1);
+        for (int i = initialArray.Length - 1; i > 0; i--)
+        {
+            initialArray[i] = initialArray[i - 1];
+        }
+        initialArray[0] = 0;
+
+        // Блок 3: Добавление элемента в позицию 4
+        Array.Resize(ref initialArray, initialArray.Length + 1);
+        for (int i = initialArray.Length - 1; i > 4; i--)
+        {
+            initialArray[i] = initialArray[i - 1];
+        }
+        initialArray[4] = 99;
+
+        // Блок 4: Удаление элемента с конца
+        Array.Resize(ref initialArray, initialArray.Length - 1);
+
+        // Блок 5: Удаление элемента с начала
+        for (int i = 0; i < initialArray.Length - 1; i++)
+        {
+            initialArray[i] = initialArray[i + 1];
+        }
+        Array.Resize(ref initialArray, initialArray.Length - 1);
+
+        // Блок 6: Удаление элемента с позиции 5 (если он существует)
+        if (initialArray.Length > 5)
+        {
+            for (int i = 5; i < initialArray.Length - 1; i++)
+            {
+                initialArray[i] = initialArray[i + 1];
+            }
+            Array.Resize(ref initialArray, initialArray.Length - 1);
+        }
+
+        // Блок 7: Создание массива из двух массивов
+        int[] secondArray = { 7, 8, 9 };
+        int[] combinedArray = new int[initialArray.Length + secondArray.Length];
+
+        Array.Copy(initialArray, combinedArray, initialArray.Length);
+        Array.Copy(secondArray, 0, combinedArray, initialArray.Length, secondArray.Length);
+
+        // Вывод итогового массива
+        Console.WriteLine("Итоговый массив:");
+        foreach (var item in combinedArray)
+        {
+            Console.WriteLine(item);
+        }
+    }
+}
+
+
+
+// **4.1**
+public bool IsSumGreaterThan100_78(List<double> a)
+{
+    return a.Sum() > 100.78;
+}
+
+// **4.2**
+public bool IsSumLessThanP(int n, List<int> b, int p)
+{
+    return b.Sum() < p;
+}
+
+// **4.3**
+public bool IsSumEven(List<int> a)
+{
+    return a.Sum() % 2 == 0;
+}
+
+// **4.4**
+public bool IsSumMultipleOfB(int n, List<int> x, int b)
+{
+    return x.Sum() % b == 0;
+}
+
+// **4.5**
+public bool HasMorePrecipitationThisYear(double[] currentYear, double[] lastYear)
+{
+    return currentYear.Sum() > lastYear.Sum();
+}
+
+// **4.6**
+public bool IsTotalWeightWithinCapacity(List<double> weights, double capacity)
+{
+    return weights.Sum() <= capacity;
+}
+
+// **4.7**
+public string BetterAthlete(List<int> athlete1, List<int> athlete2)
+{
+    return athlete1.Sum() > athlete2.Sum() ? "Athlete 1" : "Athlete 2";
+}
+
+// **4.8**
+public string CheaperSet(List<double> setA, List<double> setB)
+{
+    return setA.Sum() < setB.Sum() ? "Set A" : "Set B";
+}
+
+// **4.9**
+public bool IsProductLessThan10000(List<int> a)
+{
+    int product = a.Aggregate(1, (p, x) => p * x);
+    return product < 10000;
+}
+
+// **4.10**
+public bool IsProductGreaterThanS(int n, List<double> d, double s)
+{
+    double product = d.Aggregate(1.0, (p, x) => p * x);
+    return product > s;
+}
+
+// **4.11**
+public (bool, bool) SumsOfFilteredNumbers(List<int> b)
+{
+    bool sumGreaterThan100 = b.Where(x => x > 20).Sum() > 100;
+    bool sumEven = b.Where(x => x < 50).Sum() % 2 == 0;
+    return (sumGreaterThan100, sumEven);
+}
+
+// **4.12**
+public (bool, bool) SumConditionsForAC(int n, List<int> a)
+{
+    bool sumNotExceed50 = a.Where(x => x < 20.5).Sum() <= 50;
+    bool sumMultipleOf3 = a.Where(x => x <= 10).Sum() % 3 == 0;
+    return (sumNotExceed50, sumMultipleOf3);
+}
+
+// **4.13**
+public bool IsSumOfGreaterThan20LessThanP(int n, List<double> x, double p)
+{
+    return x.Where(num => num > 20.5).Sum() < p;
+}
+
+// **4.14**
+public bool IsSumNotMoreThanMExceedsQ(int n, List<int> a, int m, int q)
+{
+    return a.Where(num => num <= m).Sum() > q;
+}
+
+// **4.15**
+public bool IsSumMultipleOfP(int n, List<int> d, int m, int p)
+{
+    return d.Where(num => num <= m).Sum() % p == 0;
+}
+
+// **4.16**
+public bool DidEvenDaysGetMorePrecipitation(double[] precipitation)
+{
+    double evenDaysSum = 0;
+    double oddDaysSum = 0;
+
+    for (int i = 0; i < precipitation.Length; i++)
+    {
+        if ((i + 1) % 2 == 0)
+            evenDaysSum += precipitation[i];
+        else
+            oddDaysSum += precipitation[i];
+    }
+    return evenDaysSum > oddDaysSum;
+}
+
+// **4.17**
+public string MoreResidents(List<int> residents)
+{
+    int evenCount = 0, oddCount = 0;
+
+    for (int i = 0; i < residents.Count; i++)
+    {
+        if ((i + 1) % 2 == 0)
+            evenCount += residents[i];
+        else
+            oddCount += residents[i];
+    }
+
+    return evenCount > oddCount ? "Even" : "Odd";
+}
+
+// **4.18**
+public bool IsPositiveCountExceed5(List<int> a)
+{
+    return a.Count(x => x > 0) <= 5;
+}
+
+// **4.19**
+public bool IsCountOfNotGreaterThan5055MultipleOf4(List<double> a)
+{
+    return a.Count(x => x <= 50.55) % 4 == 0;
+}
+
+// **4.20**
+public bool IsCountOfLessThan20EqualFive(int n, List<int> a)
+{
+    return a.Count(x => x < 20) == 5;
+}
+
+// **4.21**
+public bool IsCountOfPositiveMultipleOf3(int m, List<int> d)
+{
+    return d.Count(x => x > 0) % 3 == 0;
+}
+
+// **4.22**
+public bool IsCountOfNegativeExceedsX(int n, List<int> a, int x)
+{
+    return a.Count(x => x < 0) > x;
+}
+
+// **4.23**
+public bool IsCountOfGreaterThanMMultipleOfP(int m, List<int> a, int p)
+{
+    return a.Count(x => x > m) % p == 0;
+}
+
+// **4.24**
+public bool AreThereNoThrees(List<int> grades)
+{
+    return !grades.Contains(3);
+}
+
+// **4.25**
+public bool WereThereRainlessDaysInMarch(double[] marchRainfall)
+{
+    return marchRainfall.Count(x => x == 0) >= 10;
+}
+
+// **4.26**
+public bool IsAverageCarCostExceedsBike(double[] cars, double[] bikes)
+{
+    double averageCarCost = cars.Average();
+    double averageBikeCost = bikes.Average();
+// **4.27**
+public bool AverageHeightBoysExceedsGirls(List<double> heights)
+{
+    var boys = heights.Where(h => h < 0).Select(h => Math.Abs(h)).ToList();
+    var girls = heights.Where(h => h >= 0).ToList();
+    
+    double averageBoys = boys.Any() ? boys.Average() : 0;
+    double averageGirls = girls.Any() ? girls.Average() : 0;
+    
+    return averageBoys > averageGirls + 10;
+}
+
+// **4.28**
+public double AverageGreaterThanTen(List<double> b)
+{
+    var greaterThan10 = b.Where(num => num > 10).ToList();
+    return greaterThan10.Count > 0 ? greaterThan10.Average() : 0;
+}
+
+// **4.29**
+public double AverageGreaterThanN(int x, List<int> a, int n)
+{
+    var greaterThanN = a.Where(num => num > n).ToList();
+    return greaterThanN.Count > 0 ? greaterThanN.Average() : 0;
+}
+
+// **4.30**
+public double AverageOfEvens(List<int> a)
+{
+    var evens = a.Where(num => num % 2 == 0).ToList();
+    return evens.Count > 0 ? evens.Average() : 0;
+}
+
+// **4.31**
+public double AverageOfMultiples(List<int> a, int n)
+{
+    var multiples = a.Where(num => num % n == 0).ToList();
+    return multiples.Count > 0 ? multiples.Average() : 0;
+}
+
+// **4.32**
+public int LastIndexEqualTo100(List<int> a)
+{
+    return a.LastIndexOf(100);
+}
+
+// **4.33**
+public int LastIndexOfNegative(List<int> a)
+{
+    return a.LastIndexOf(a.Last(x => x < 0));
+}
+
+// **4.34**
+public bool MaxMinDifferenceLessThan25(List<int> a)
+{
+    int max = a.Max();
+    int min = a.Min();
+    return max - min <= 25;
+}
+
+// **4.35**
+public bool HeaviestTwiceAsLight(List<double> weights)
+{
+    double maxWeight = weights.Max();
+    double minWeight = weights.Min();
+    return maxWeight > 2 * minWeight;
+}
+
+// **4.36**
+public bool MaxOrMinIndex(List<int> x)
+{
+    int maxIndex = Array.LastIndexOf(x.ToArray(), x.Max());
+    int minIndex = Array.LastIndexOf(x.ToArray(), x.Min());
+    return maxIndex < minIndex;
+}
+
+// **4.37**
+public bool OldestOrYoungest(List<int> ages)
+{
+    int oldestIndex = Array.IndexOf(ages.ToArray(), ages.Max());
+    int youngestIndex = Array.IndexOf(ages.ToArray(), ages.Min());
+    return oldestIndex < youngestIndex;
+}
+
+// **4.38**
+public bool IsFirstStageWonBeforeLast(List<int> times)
+{
+    int firstPlaceStage = times.IndexOf(times.Min());
+    int lastPlaceStage = times.IndexOf(times.Max());
+    return firstPlaceStage < lastPlaceStage;
+}
+
+// **4.39**
+public (int, int) CountEqualAndDistinct(List<int> sequence)
+{
+    int equalCount = sequence.GroupBy(x => x).Where(g => g.Count() > 1).Sum(g => g.Count());
+    int distinctCount = sequence.Distinct().Count();
+    return (equalCount, distinctCount);
+}
+
+// **4.40**
+public int CountDistinctInIncreasingSequence(List<int> sequence)
+{
+    return sequence.Distinct().Count();
+}
+
+// **4.41**
+public bool AreDominoesValid(List<int> dominoes)
+{
+    // Case a
+    bool caseA = dominoes.All(d => d >= 0 && d <= 66 && d % 10 <= d / 10);
+    // Case b
+    bool caseB = dominoes.All(d => d >= 0 && d <= 66);
+    return caseA || caseB;
+}
+
+// **4.42**
+public bool IsPrime(int number)
+{
+    if (number <= 1) return false;
+    for (int i = 2; i <= Math.Sqrt(number); i++)
+    {
+        if (number % i == 0) return false;
+    }
+    return true;
+}
+
+// **4.43**
+public bool IsPerfect(int number)
+{
+    int sum = 0;
+    for (int i = 1; i < number; i++)
+    {
+        if (number % i == 0)
+            sum += i;
+    }
+    return sum == number;
+}
+
+
+using System;
+
+class Program
+{
+    // **Рекурсивная функция для нахождения суммы цифр числа**
+    static int SumOfDigits(int number)
+    {
+        // Обрабатываем отрицательные числа
+        number = Math.Abs(number);
+      
+        // Базовый случай: если число равно 0, возвращаем 0
+        if (number == 0)
+            return 0;
+
+        // Рекурсивный вызов: последняя цифра + сумма остальных цифр
+        return number % 10 + SumOfDigits(number / 10);
+    }
+
+    static void Main(string[] args)
+    {
+        // Пример больших чисел
+        long largeNumber = 9876543210;
+        
+        // Вызов функции и вывод результата
+        Console.WriteLine($"Сумма цифр числа {largeNumber}: {SumOfDigits((int)largeNumber)}");
+    }
+}
+
+
+using System;
+
+class Program
+{
+    // **Рекурсивная функция для переворота строки**
+    static string ReverseString(string str)
+    {
+        // Базовый случай: если строка пустая или состоит из одного символа
+        if (str.Length <= 1)
+            return str;
+
+        // Рекурсивный вызов: последний символ + перевернутая оставшаяся часть строки
+        return str[^1] + ReverseString(str[..^1]);
+    }
+
+    static void Main(string[] args)
+    {
+        // Пример строки с пробелами и специальными символами
+        string input = "Привет, мир! @2023";
+        
+        // Вызов функции и вывод результата
+        string reversed = ReverseString(input);
+        Console.WriteLine($"Перевернутая строка: {reversed}");
+    }
+}
+
+
+using System;
+
+class Program
+{
+    // **Рекурсивная функция поиска элемента в массиве**
+    static bool RecursiveSearch(int[] array, int target, int index)
+    {
+        // **Базовый случай:** если индекс достиг конца массива, элемент не найден
+        if (index >= array.Length)
+        {
+            return false;
+        }
+        
+        // **Проверка текущего элемента**
+        if (array[index] == target)
+        {
+            return true;
+        }
+
+        // **Рекурсивный вызов для следующего элемента**
+        return RecursiveSearch(array, target, index + 1);
+    }
+
+    static void Main()
+    {
+        // **Примеры массивов**
+        int[] array1 = { 5, 3, 8, 4, 2 };
+        int[] array2 = { 1, 2, 3, 4, 5, 6 };
+        
+        // **Тестирование функции**
+        Console.WriteLine("Найден ли 4 в array1? " + RecursiveSearch(array1, 4, 0)); // True
+        Console.WriteLine("Найден ли 7 в array1? " + RecursiveSearch(array1, 7, 0)); // False
+        Console.WriteLine("Найден ли 2 в array2? " + RecursiveSearch(array2, 2, 0)); // True
+        Console.WriteLine("Найден ли 0 в array2? " + RecursiveSearch(array2, 0, 0)); // False
+    }
+}
+
+
+using System;
+
+class Program
+{
+    // **Рекурсивная функция для решения задачи Ханойских башен**
+    static void TowerOfHanoi(int n, char source, char destination, char auxiliary)
+    {
+        // **Базовый случай:** Если есть только один диск
+        if (n == 1)
+        {
+            Console.WriteLine($"Переместите диск 1 с {source} на {destination}");
+            return;
+        }
+        
+        // **Переместите n-1 дисков с source на auxiliary**
+        TowerOfHanoi(n - 1, source, auxiliary, destination);
+        
+        // **Переместите последний диск с source на destination**
+        Console.WriteLine($"Переместите диск {n} с {source} на {destination}");
+        
+        // **Переместите n-1 дисков с auxiliary на destination**
+        TowerOfHanoi(n - 1, auxiliary, destination, source);
+    }
+
+    static void Main()
+    {
+        // **Тестирование функции для разных значений n**
+        int n = 3; // количество дисков
+        Console.WriteLine($"Решение задачи Ханойских башен для {n} дисков:");
+        TowerOfHanoi(n, 'A', 'C', 'B'); // A - исходный стержень, C - целевой, B - вспомогательный
+
+        Console.WriteLine(); // пустая строка
+
+        n = 4; // тест для 4 дисков
+        Console.WriteLine($"Решение задачи Ханойских башен для {n} дисков:");
+        TowerOfHanoi(n, 'A', 'C', 'B');
+    }
+}
+
+
+using System;
+
+class Program
+{
+    // **Рекурсивная функция для возведения числа a в степень b**
+    static double Power(double a, int b)
+    {
+        // **Обработка отрицательной степени**
+        if (b < 0)
+        {
+            return 1 / Power(a, -b); // инвертируем для отрицательных степеней
+        }
+        
+        // **Базовый случай:** a в степени 0 равно 1
+        if (b == 0)
+        {
+            return 1;
+        }
+
+        // **Рекурсивный случай:** a в степени b равно a умножить на a в степени b-1
+        return a * Power(a, b - 1);
+    }
+
+    static void Main()
+    {
+        // **Тестирование функции**
+        Console.WriteLine("3 в степени 4: " + Power(3, 4));  // 81
+        Console.WriteLine("2 в степени 3: " + Power(2, 3));  // 8
+        Console.WriteLine("5 в степени -2: " + Power(5, -2)); // 0.04
+        Console.WriteLine("7 в степени 0: " + Power(7, 0));  // 1
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    // **Рекурсивная функция для нахождения НОД**
+    static int GCD(int a, int b)
+    {
+        // **Базовый случай:** если b равно 0, возвращаем a
+        if (b == 0)
+        {
+            return a;
+        }
+
+        // **Рекурсивный случай:** НОД(a, b) равен НОД(b, остаток от деления a на b
+        return GCD(b, a % b);
+    }
+
+    static void Main()
+    {
+        // **Тестирование функции на нескольких парах чисел**
+        Console.WriteLine("НОД(48, 18): " + GCD(48, 18));  // 6
+        Console.WriteLine("НОД(56, 98): " + GCD(56, 98));  // 14
+        Console.WriteLine("НОД(101, 10): " + GCD(101, 10)); // 1
+        Console.WriteLine("НОД(54, 24): " + GCD(54, 24));  // 6
+    }
+}
+
+
+
+
+using System;
+
+class Program
+{
+    // **Метод для вычисления n-го числа Фибоначчи**
+    static int Fibonacci(int n)
+    {
+        // **Проверка на допустимость введённого числа**
+        if (n < 0)
+        {
+            throw new ArgumentException("Число должно быть неотрицательным.");
+        }
+
+        // **Локальная рекурсивная функция для вычисления Фибоначчи**
+        int Fibo(int x)
+        {
+            if (x == 0) return 0;
+            if (x == 1) return 1;
+            return Fibo(x - 1) + Fibo(x - 2);
+        }
+
+        return Fibo(n);
+    }
+
+    static void Main()
+    {
+        // **Тестирование метода**
+        Console.WriteLine("Введите число для вычисления n-го числа Фибоначчи:");
+        int n = int.Parse(Console.ReadLine());
+
+        try
+        {
+            Console.WriteLine($"Число Фибоначчи для {n}: {Fibonacci(n)}");
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+
+
+
+public class PrimeChecker
+{
+    public static bool IsPrime(int number)
+    {
+        // Проверяем, что число больше 1
+        if (number <= 1) return false;
+
+        // Локальная функция для проверки делимости
+        bool IsDivisible(int divisor)
+        {
+            return number % divisor == 0;
+        }
+
+        // Проверяем делители до квадратного корня из числа
+        for (int i = 2; i * i <= number; i++)
+        {
+            if (IsDivisible(i))
+            {
+                return false; // Если найден делитель, число не простое
+            }
+        }
+
+        return true; // Число простое
+    }
+}
+
+
+using System;
+
+class Program
+{
+    // **Метод для возведения числа в степень**
+    static double Power(double baseNum, int exponent)
+    {
+        // **Локальная рекурсивная функция для возведения в степень**
+        double Pow(int exp)
+        {
+            if (exp == 0) return 1; // любое число в степени 0 равно 1
+            if (exp < 0) return 1 / Pow(-exp); // обработка отрицательной степени
+            return baseNum * Pow(exp - 1);
+        }
+
+        return Pow(exponent);
+    }
+
+    static void Main()
+    {
+        // **Тестирование метода**
+        Console.WriteLine("Введите основание:");
+        double baseNum = double.Parse(Console.ReadLine());
+        Console.WriteLine("Введите степень:");
+        int exponent = int.Parse(Console.ReadLine());
+
+        double result = Power(baseNum, exponent);
+        Console.WriteLine($"{baseNum} в степени {exponent} равно {result}");
+    }
+}
+
+
+using System;
+
+class Program
+{
+    // **Метод для нахождения суммы цифр числа**
+    static int SumOfDigits(int number)
+    {
+        // **Локальная рекурсивная функция для расчета суммы цифр**
+        int CalculateSum(int num)
+        {
+            if (num == 0) return 0; // базовый случай
+            return Math.Abs(num % 10) + CalculateSum(num / 10); // рекурсивное извлечение цифр
+        }
+
+        return CalculateSum(Math.Abs(number)); // обрабатываем абсолютное значение числа
+    }
+
+    static void Main()
+    {
+        // **Тестирование метода**
+        Console.WriteLine("Введите число:");
+        int number = int.Parse(Console.ReadLine());
+
+        int result = SumOfDigits(number);
+        Console.WriteLine($"Сумма цифр числа {number} равна {result}");
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    // **Метод для поиска максимального значения в массиве**
+    static int? FindMaxValue(int[] array)
+    {
+        // **Проверка на пустой массив**
+        if (array == null || array.Length == 0)
+        {
+            return null; // возвращаем null для обозначения отсутствия максимума
+        }
+
+        // **Локальная рекурсивная функция для определения максимального значения**
+        int MaxRecursively(int[] arr, int index, int currentMax)
+        {
+            if (index >= arr.Length) return currentMax; // базовый случай
+            return MaxRecursively(arr, index + 1, Math.Max(currentMax, arr[index])); // сравниваем и продолжаем
+        }
+
+        return MaxRecursively(array, 1, array[0]); // начинаем с первого элемента
+    }
+
+    static void Main()
+    {
+        // **Тестирование метода**
+        int[] numbers = { 3, 5, 1, 9, 2 };
+
+        var maxValue = FindMaxValue(numbers);
+        Console.WriteLine(maxValue.HasValue 
+            ? $"Максимальное значение: {maxValue.Value}" 
+            : "Массив пустой");
+    }
+}
+
+
+using System;
+
+class Program
+{
+    // **Метод для проверки, является ли строка палиндромом**
+    static bool IsPalindrome(string input)
+    {
+        // **Удаление пробелов и приведение к нижнему регистру**
+        input = input.Replace(" ", "").ToLower();
+
+        // **Локальная рекурсивная функция для проверки палиндрома**
+        bool CheckPalindrome(int start, int end)
+        {
+            if (start >= end) return true; // базовый случай, когда символы совпадают
+
+            // Сравнить символы с начала и конца
+            if (input[start] != input[end]) return false;
+
+            // Рекурсивный вызов для следующей пары символов
+            return CheckPalindrome(start + 1, end - 1);
+        }
+
+        return CheckPalindrome(0, input.Length - 1); // запускаем с первых и последних символов
+    }
+
+    static void Main()
+    {
+        // **Тестирование метода**
+        string testString = "A man a plan a canal Panama";
+        bool isPalin = IsPalindrome(testString);
+        Console.WriteLine(isPalin 
+            ? "Строка является палиндромом" 
+            : "Строка не является палиндромом");
+    }
+}
+
+
+public class TowersOfHanoi
+{
+    public static void SolveHanoi(int n, char source, char target, char auxiliary)
+    {
+        // Локальная функция для рекурсивного перемещения дисков
+        void MoveDisks(int number, char from, char to, char temp)
+        {
+            if (number == 1)
+            {
+                Console.WriteLine($"Переместите диск 1 с {from} на {to}");
+                return;
+            }
+
+            MoveDisks(number - 1, from, temp, to); // Переместить n-1 дисков с источника на вспомогательный
+            Console.WriteLine($"Переместите диск {number} с {from} на {to}"); // Переместить n-й диск на целевую башню
+            MoveDisks(number - 1, temp, to, from); // Переместить n-1 дисков с вспомогательной на целевую
+        }
+
+        // Запускаем решение с n дисками
+        MoveDisks(n, source, target, auxiliary);
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+
+class TreeNode
+{
+    public int Value;
+    public TreeNode Left;
+    public TreeNode Right;
+
+    public TreeNode(int value)
+    {
+        Value = value;
+        Left = null;
+        Right = null;
+    }
+}
+
+class Program
+{
+    // **Метод для поиска элемента в бинарном дереве**
+    static bool FindElement(TreeNode root, int target, List<int> path)
+    {
+        // **Локальная функция для рекурсивного поиска**
+        bool Search(TreeNode node)
+        {
+            if (node == null) return false;
+
+            path.Add(node.Value); // добавляем текущий узел в путь
+
+            if (node.Value == target) return true; // нашли элемент
+
+            // Рекурсивный вызов для левого и правого поддерева
+            if (Search(node.Left) || Search(node.Right)) return true;
+
+            path.RemoveAt(path.Count - 1); // удаляем узел, если элемент не найден
+            return false;
+        }
+
+        return Search(root); // запускаем поиск с корня дерева
+    }
+
+    static void Main()
+    {
+        // **Создание бинарного дерева**
+        TreeNode root = new TreeNode(5)
+        {
+            Left = new TreeNode(3)
+            {
+                Left = new TreeNode(1),
+                Right = new TreeNode(4)
+            },
+            Right = new TreeNode(8)
+        };
+
+        List<int> path = new List<int>();
+        int target = 4;
+        
+        // **Поиск элемента и вывод пути**
+        if (FindElement(root, target, path))
+        {
+            Console.WriteLine($"Элемент {target} найден! Путь: {string.Join(" -> ", path)}");
+        }
+        else
+        {
+            Console.WriteLine($"Элемент {target} не найден.");
+        }
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    // **Метод для нахождения НОД двух чисел**
+    static int FindGCD(int a, int b)
+    {
+        // **Локальная функция для рекурсивного алгоритма Евклида**
+        int EuclideanGCD(int x, int y)
+        {
+            if (y == 0) return x; // Базовый случай
+            return EuclideanGCD(y, x % y); // Рекурсивный вызов
+        }
+
+        return EuclideanGCD(a, b); // Запуск алгоритма с входными числами
+    }
+
+    static void Main()
+    {
+        // **Проверка метода на нескольких парах чисел**
+        Console.WriteLine($"НОД(48, 18) = {FindGCD(48, 18)}"); // Ожидается 6
+        Console.WriteLine($"НОД(56, 98) = {FindGCD(56, 98)}"); // Ожидается 14
+        Console.WriteLine($"НОД(101, 10) = {FindGCD(101, 10)}"); // Ожидается 1
+        Console.WriteLine($"НОД(81, 153) = {FindGCD(81, 153)}"); // Ожидается 9
+    }
+}
